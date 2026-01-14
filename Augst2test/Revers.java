@@ -8,7 +8,7 @@ import java.util.Scanner;
         String str = sc.nextLine();
 
         
-        str += " ";
+        str = str + " ";
 
         String w = "";
         String result = ""; 

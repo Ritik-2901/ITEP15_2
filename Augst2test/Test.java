@@ -63,19 +63,26 @@ class Library {
 
     
     public void deleteBook(int id) {
-         
-                books.remove(id);
-                
+        boolean found = false;
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getId() == id) {
+                System.out.println("Deleting book: " + books.get(i).getTitle());  
+                books.remove(i);
+                found = true;
+                break;
             }
         }
-     
-   
+        if (!found) {
+            System.out.println("Book with ID " + id + " not found.");
+        }
+    }
+}
 
- class Test1 {
+ class Test {
     public static void main(String[] args) {
         Library lib = new Library();
 
-    
+        
         lib.addBook(new Book(1, "Java", "Ritik"));
         lib.addBook(new Book(2, "C++", "Dipesh"));
         lib.addBook(new Book(3, "Python", "Tarun"));
@@ -90,7 +97,7 @@ class Library {
         lib.deleteBook(deleteId);
 
        
-        System.out.println("\nRemaining books :");
+        System.out.println("\nRemaining books in  library:");
         lib.listBooks();
     }
 }

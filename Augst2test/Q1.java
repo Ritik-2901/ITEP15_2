@@ -13,10 +13,10 @@ import java.util.Scanner;
         System.out.println("Enter the elements:");
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
-            System.out.print(arr[i]);
         }
 
-        
+         int uni[] = new int[n];
+        int uniCount = 0;
          
             
 
@@ -31,5 +31,5 @@ import java.util.Scanner;
         }
         } 
     
-    
+    }
 
