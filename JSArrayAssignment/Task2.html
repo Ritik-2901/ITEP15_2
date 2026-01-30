@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater Using DOM</title>
+    <style>
+        #Result{
+            border: 1px solid black;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter 1 NO." id="NO1">&nbsp;&nbsp;&nbsp;<br/><br/>
+    <input type="text" placeholder="Enter 2 NO." id="NO2">&nbsp;&nbsp;&nbsp;<br/><br/>
+    <span id="Result"></span><br/>
+    <button onclick="add()">+</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="sub()">-</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="mul()">*</button>&nbsp;&nbsp;&nbsp;
+
+    <script>
+        function add(){
+            let no1 = document.getElementById("NO1").value;
+            let no2 = document.getElementById("NO2").value;
+
+            let total = no1*1+no2*1;
+            document.getElementById("Result").innerText = total;
+
+        }
+        function sub(){
+            let no1 = document.getElementById("NO1").value;
+            let no2 = document.getElementById("NO2").value;
+
+            let total = (no1*1)-(no2*1)
+            document.getElementById("Result").innerText=total;
+
+        }
+        function mul(){
+            let no1 = document.getElementById("NO1").value;
+            let no2 = document.getElementById("NO2").value;
+
+            let total = no1*1*no2*1;
+            document.getElementById("Result").innerText = total;
+        }
+    </script>
+</body>
+</html>

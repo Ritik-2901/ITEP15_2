@@ -1,0 +1,1 @@
+marbale_heros.push(dc_heros);

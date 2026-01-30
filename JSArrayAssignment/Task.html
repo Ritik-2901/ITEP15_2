@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <input onkeyup="sum()" type="text" id="task1"><br/>
+    <input onkeyup="sum()" type="text" id="task2"><br/>
+    <input onkeyup="sum()" type="text" id="task3"><br/>
+    <span id="Result"></span>
+
+    <script>
+        function sum(){
+            let t1 = document.getElementById("task1").value;
+            let t2 = document.getElementById("task2").value;
+            let t3 = document.getElementById("task3").value;
+
+            let result = t1*1+t2*1+t3*1
+            document.getElementById("Result").innerText=result;
+        }
+    </script>
+</body>
+</html>
